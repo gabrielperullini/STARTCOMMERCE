@@ -1,22 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar(props) {
   return (
     <div className="App">
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand>
-          <img
-            alt=""
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
-          Smart Commerce
-        </Navbar.Brand>
+        <CartWidget/>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -50,9 +41,9 @@ function NavBar(props) {
             <NavDropdown title="Aire Libre" id="basic-nav-dropdown">
               <NavDropdown.Item href="#bicicletas">Bicicletas</NavDropdown.Item>
               <NavDropdown.Item href="Camping">Camping</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown>            
             <Nav.Link href="#quienesomos">Quienes Somos?</Nav.Link>
-          </Nav>
+          </Nav>          
         </Navbar.Collapse>
       </Navbar>
     </div>
