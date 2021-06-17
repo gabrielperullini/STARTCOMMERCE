@@ -21,44 +21,37 @@ function NavBar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <NavDropdown title="Tecnologia" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Celulares</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Notebooks/PC
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Gadgets</NavDropdown.Item>
+              <NavDropdown.Item href="#celulares">Celulares</NavDropdown.Item>
+              <NavDropdown.Item href="#notebooks">Notebooks/PC</NavDropdown.Item>
+              <NavDropdown.Item href="#gadgets">Gadgets</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Hogar" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">TV's</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Sonido</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Muebles</NavDropdown.Item>
+              <NavDropdown.Item href="#tvs">TV's</NavDropdown.Item>
+              <NavDropdown.Item href="#sonido">Sonido</NavDropdown.Item>
+              <NavDropdown.Item href="#muebles">Muebles</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Hogar Inteligente
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#hogarinteligente">Hogar Inteligente</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Vehiculos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Accesorios</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Cubiertas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Repuestos</NavDropdown.Item>
+              <NavDropdown.Item href="#accesorios">Accesorios</NavDropdown.Item>
+              <NavDropdown.Item href="#cubiertas">Cubiertas</NavDropdown.Item>
+              <NavDropdown.Item href="#repuestos">Repuestos</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Ofertas Especiales
+              <NavDropdown.Item href="#ofertasvehiculos">Ofertas Especiales
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Juguetes" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Niños</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Niñas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Consolas</NavDropdown.Item>
+              <NavDropdown.Item href="#juguetesninios">Niños</NavDropdown.Item>
+              <NavDropdown.Item href="#juguetesninias">Niñas</NavDropdown.Item>
+              <NavDropdown.Item href="#juguetesconsolas">Consolas</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Juegos en ofertas
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#ofertasjuegos">Juegos en ofertas</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Aire Libre" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Vicicletas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Camping</NavDropdown.Item>
+              <NavDropdown.Item href="#bicicletas">Bicicletas</NavDropdown.Item>
+              <NavDropdown.Item href="Camping">Camping</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#home">Quienes Somos?</Nav.Link>
+            <Nav.Link href="#quienesomos">Quienes Somos?</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
