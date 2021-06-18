@@ -24,6 +24,13 @@
   color: white;
 }
 
+.App-container {
+  background-color: #b4b4b4;
+  columns: auto;
+  padding: 5;
+  text-align: center;  
+}
+
 .App-link {
   color: #61dafb;
 }
