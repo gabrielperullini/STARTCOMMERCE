@@ -1,16 +1,34 @@
 import React from "react";
-import img from "./logo.svg";
+import { Card } from "react-bootstrap";
+import ItemCount from "../ItemCount/ItemCount";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function ItemListContainer(props) {
-return(   
-<>
-<img  src={img} alt='logo empresa' width='5%'/>
-<h1>{props.title}</h1>
-<h2>{props.subtitle}</h2>
-</>
-)   
-};
+  
+
+  
+
+  return (
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={props.imagen} />
+      <Card.Body>
+        <Card.Title>{props.title}</Card.Title>
+        <Card.Text>{props.subtitle}</Card.Text>
+      </Card.Body>      
+      <Card.Body>
+        <ItemCount
+        cantidad={props.cantidad}/>
+      </Card.Body>
+    </Card>
+  );
+}
 
 export default ItemListContainer;
+
+//<>
+//<img  src={img} alt='logo empresa' width='5%'/>
+//<h1>{props.title}</h1>
+//<h2>{props.subtitle}</h2>
+//</>
+//</div>
