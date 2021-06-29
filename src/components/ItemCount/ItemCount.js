@@ -3,7 +3,6 @@ import { Card, Button, ListGroup, ListGroupItem } from "react-bootstrap";
 import CartWidget from "../CartWidget/CartWidget";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 function ItemCount(props) {
   const [numero, setNumero] = useState(props.cantidad);
   const [cant, setCant] = useState(0);
