@@ -16,10 +16,9 @@ function ItemListContainer() {
     }, 2000);
   });
 
-  let objdato=items;
+  let objdato = items;
   return (
     <>
-    
       <ItemList objeto={objdato} />
     </>
   );
