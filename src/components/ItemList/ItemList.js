@@ -3,18 +3,24 @@ import { Card } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function ItemList(props) {
+function ItemList(props) {  
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={props.imagen} />
-      <Card.Body>
-        <Card.Title>{props.titulo}</Card.Title>
-        <Card.Text>{props.descripcion}</Card.Text>
-      </Card.Body>
-      <Card.Body>
-        <ItemCount cantidad={props.cantidad} />
-      </Card.Body>
-    </Card>
+    <>
+      {props.objeto.map((item) => (
+        <div className="col" key={item.id}>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={item.imagen} />
+            <Card.Body>
+              <Card.Title>{item.titulo}</Card.Title>
+              <Card.Text>{item.descripcion}</Card.Text>
+            </Card.Body>
+            <Card.Body>
+              <ItemCount cantidad={item.cantidad} />
+            </Card.Body>
+          </Card>
+        </div>
+      ))}
+    </>
   );
 }
 

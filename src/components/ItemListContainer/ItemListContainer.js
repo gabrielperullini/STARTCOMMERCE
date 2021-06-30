@@ -6,7 +6,7 @@ import ItemList from "../ItemList/ItemList";
 //DATOS
 import { itemsData } from "../ItemData/ItemData";
 
-function ItemListContainer(props) {
+function ItemListContainer() {
   const [items, setItems] = useState([]);
 
   //USE EFFECT
@@ -16,19 +16,11 @@ function ItemListContainer(props) {
     }, 2000);
   });
 
+  let objdato=items;
   return (
     <>
-      {items.map((item) => (
-        <div className="col" key={item.id}>
-          <ItemList
-            titulo={item.title}
-            descripcion={item.descripcion}
-            precio={item.precio}
-            cantidad={item.cantidad}
-            imagen={item.imagen}
-          />
-        </div>
-      ))}
+    
+      <ItemList objeto={objdato} />
     </>
   );
 }
