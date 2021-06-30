@@ -1,20 +1,35 @@
-import React from "react";
-import { Card } from "react-bootstrap";
-import ItemCount from "../ItemCount/ItemCount";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState, useEffect } from "react";
+
+//COMPONENTES
+import ItemList from "../ItemList/ItemList";
+
+//DATOS
+import { itemsData } from "../ItemData/ItemData";
 
 function ItemListContainer(props) {
+  const [items, setItems] = useState([]);
+
+  //USE EFFECT
+  useEffect(() => {
+    setTimeout(() => {
+      setItems(itemsData);
+    }, 2000);
+  });
+
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={props.imagen} />
-      <Card.Body>
-        <Card.Title>{props.titulo}</Card.Title>
-        <Card.Text>{props.descripcion}</Card.Text>
-      </Card.Body>
-      <Card.Body>
-        <ItemCount cantidad={props.cantidad} />
-      </Card.Body>
-    </Card>
+    <>
+      {items.map((item) => (
+        <div className="col" key={item.id}>
+          <ItemList
+            titulo={item.title}
+            descripcion={item.descripcion}
+            precio={item.precio}
+            cantidad={item.cantidad}
+            imagen={item.imagen}
+          />
+        </div>
+      ))}
+    </>
   );
 }
 

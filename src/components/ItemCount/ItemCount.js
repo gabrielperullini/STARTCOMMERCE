@@ -21,8 +21,6 @@ function ItemCount(props) {
     }
   };
 
-  console.log(props.imagen);
-
   return (
     <Card className="App">
       <Card.Body>

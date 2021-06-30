@@ -4,7 +4,7 @@ import "./App.css";
 
 //COMPONENTS
 import NavBar from "./components/NavBar/NavBar";
-import ItemList from "./components/ItemList/ItemList";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <div className="container">
         <div className="row align-items-start">
           <div className="row">
-            <ItemList />
+            <ItemListContainer />
           </div>
         </div>
       </div>
