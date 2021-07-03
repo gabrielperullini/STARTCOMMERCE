@@ -14,10 +14,9 @@ function Item(props) {
           </Link>
           <Card.Body>
             <Card.Title>{props.tit}</Card.Title>
-            <Card.Text>{props.desc}</Card.Text>
-            <Card.Text>Precio: {props.price}</Card.Text>
           </Card.Body>
           <Card.Body>
+            <Card.Text>Precio: {props.price}</Card.Text>
             <ItemCount cantidad={props.cant} />
           </Card.Body>
         </Card>
@@ -27,3 +26,4 @@ function Item(props) {
 }
 
 export default Item;
+//<Card.Text>{props.desc}</Card.Text>

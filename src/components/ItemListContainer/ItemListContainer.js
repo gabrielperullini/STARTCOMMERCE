@@ -6,7 +6,7 @@ import ItemList from "../ItemList/ItemList";
 //DATOS
 import { itemsData } from "../ItemData/ItemData";
 
-function ItemListContainer(props) {
+const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
 
   //USE EFFECT
@@ -18,12 +18,10 @@ function ItemListContainer(props) {
 
   let objdato;
 
-  if (props.elements === "oferta") {
-    objdato = items.filter((item) => item.destacado === true);
+  if (props.elements !== "OFERTA") {
+    objdato = items.filter((item) => item.tag === props.elements);
   } else {
-    if (props.elements === "CUBIERTAS") {
-      objdato = items.filter((item) => item.tag === "CUBIERTA");
-    }
+    objdato = items.filter((item) => item.destacado === true);
   }
 
   return (
@@ -31,7 +29,7 @@ function ItemListContainer(props) {
       <ItemList objeto={objdato} />
     </>
   );
-}
+};
 
 export default ItemListContainer;
 

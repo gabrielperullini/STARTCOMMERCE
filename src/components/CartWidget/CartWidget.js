@@ -8,18 +8,16 @@ function CartWidget() {
   return (
     <>
       <div className="App">
-        <Link className="Link" to="/">
-          <Card border="dark">
-            <Card.Img
-              alt="logo empresa"
-              src={logo}
-              backgroundColor="black"
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-            />
-          </Card>
-        </Link>
+        <Card border="dark">
+          <Card.Img
+            alt="logo empresa"
+            src={logo}
+            backgroundColor="black"
+            width="40"
+            height="40"
+            className="d-inline-block align-top"
+          />
+        </Card>
       </div>
     </>
   );

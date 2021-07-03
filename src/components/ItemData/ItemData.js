@@ -14,7 +14,7 @@ export const itemsData = [
     cantidad: "5",
     destacado: true,
     imagen: im1,
-    tag: "NOTEBOOK",
+    tag: "NOTEBOOKS",
   },
   {
     id: "1",
@@ -24,7 +24,7 @@ export const itemsData = [
     cantidad: "15",
     destacado: true,
     imagen: im2,
-    tag: "TV",
+    tag: "TVS",
   },
   {
     id: "2",
@@ -34,7 +34,7 @@ export const itemsData = [
     cantidad: "8",
     destacado: false,
     imagen: im3,
-    tag: "NINIO",
+    tag: "NIÑOS",
   },
   {
     id: "3",
@@ -44,7 +44,7 @@ export const itemsData = [
     cantidad: "9",
     destacado: false,
     imagen: im4,
-    tag: "BICILCLETA",
+    tag: "BICICLETAS",
   },
   {
     id: "4",
@@ -54,7 +54,7 @@ export const itemsData = [
     cantidad: "1",
     destacado: true,
     imagen: im5,
-    tag: "CUBIERTA",
+    tag: "CUBIERTAS",
   },
   {
     id: "5",
@@ -64,6 +64,6 @@ export const itemsData = [
     cantidad: "4",
     destacado: false,
     imagen: im6,
-    tag: "CONSOLA",
+    tag: "CONSOLAS",
   },
 ];

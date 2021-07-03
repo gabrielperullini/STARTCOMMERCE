@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import About from "./Pages/Institucional/About";
 import Home from "./Pages/Home/Home";
 import Detalle from "./Pages/Detalle/Detalle";
-import Cubiertas from "./Pages/Vehiculos/Cubiertas";
+import Categoria from "./Pages/Categoria/Categoria";
 
 //COMPONENTS
 import NavBar from "./components/NavBar/NavBar";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/About" exact component={About} />
           <Route path="/Detalle/:id" exact component={Detalle} />
-          <Route path="/Cubiertas" exact component={Cubiertas} />
+          <Route path="/categorias/:category" exact component={Categoria} />
         </Switch>
       </BrowserRouter>
     </>
