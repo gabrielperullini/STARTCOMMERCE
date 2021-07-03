@@ -1,24 +1,29 @@
-import React from "react";
+import { React } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+//PAGES
+import About from "./Pages/Institucional/About";
+import Home from "./Pages/Home/Home";
+import Detalle from "./Pages/Detalle/Detalle";
+import Cubiertas from "./Pages/Vehiculos/Cubiertas";
 
 //COMPONENTS
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <h2>Las ofertas de la semana</h2>
-      <div className="container">
-        <div className="row align-items-start">
-          <div className="row">
-            <ItemListContainer />
-          </div>
-        </div>
-      </div>
-      ))
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/About" exact component={About} />
+          <Route path="/Detalle/:id" exact component={Detalle} />
+          <Route path="/Cubiertas" exact component={Cubiertas} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }

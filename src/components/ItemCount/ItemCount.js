@@ -29,23 +29,24 @@ function ItemCount(props) {
             STOCK: {numero} COMPRA: {cant}
           </ListGroupItem>
         </ListGroup>
-        <div class="container">
-          <div class="row align-items-start">
-            <div class="col">
+        <div className="container">
+          <div className="row align-items-start">
+            <div className="col">
               <CartWidget />
             </div>
-            <div class="col">
+            <div className="col">
               <Button onClick={handleIncrement} variant="outline-success">
                 +
               </Button>
             </div>
-            <div class="col">
+            <div className="col">
               <Button onClick={handleDecrement} variant="outline-primary">
                 -
               </Button>
             </div>
           </div>
         </div>
+
         <Button variant="primary">AGREGAR</Button>
       </Card.Body>
     </Card>

@@ -1,6 +1,10 @@
-import React from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { React } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+//COMPONENTE
 import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar(props) {
@@ -29,7 +33,9 @@ function NavBar(props) {
             </NavDropdown>
             <NavDropdown title="Vehiculos" id="basic-nav-dropdown">
               <NavDropdown.Item href="#accesorios">Accesorios</NavDropdown.Item>
-              <NavDropdown.Item href="#cubiertas">Cubiertas</NavDropdown.Item>
+              <Link className="Link" to="/Cubiertas">
+                <NavDropdown.Item href="#cubiertas">Cubiertas</NavDropdown.Item>
+              </Link>
               <NavDropdown.Item href="#repuestos">Repuestos</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#ofertasvehiculos">
@@ -51,7 +57,11 @@ function NavBar(props) {
               <NavDropdown.Item href="#bicicletas">Bicicletas</NavDropdown.Item>
               <NavDropdown.Item href="Camping">Camping</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#quienesomos">Quienes Somos?</Nav.Link>
+            <Link className="Link" to="/About">
+              <Nav.Link activeClassName="active_class" href="/About">
+                Quienes Somos?
+              </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
