@@ -2,6 +2,7 @@ import { React } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {CartProvider} from "./components/CartContext/CartContext."
 
 //PAGES
 import About from "./Pages/Institucional/About";
@@ -15,7 +16,9 @@ import NavBar from "./components/NavBar/NavBar";
 function App() {
   return (
     <>
+
       <BrowserRouter>
+      <CartProvider>
         <NavBar />
         <Switch>
           <Route path="/" exact component={Home} />
@@ -23,7 +26,10 @@ function App() {
           <Route path="/Detalle/:id" exact component={Detalle} />
           <Route path="/categorias/:category" exact component={Categoria} />
         </Switch>
+        </CartProvider>
       </BrowserRouter>
+
+    
     </>
   );
 }

@@ -16,8 +16,7 @@ function Item(props) {
             <Card.Title>{props.tit}</Card.Title>
           </Card.Body>
           <Card.Body>
-            <Card.Text>Precio: {props.price}</Card.Text>
-            <ItemCount cantidad={props.cant} />
+            <Card.Text>Precio: {props.price}</Card.Text>            
           </Card.Body>
         </Card>
       </div>
@@ -27,3 +26,4 @@ function Item(props) {
 
 export default Item;
 //<Card.Text>{props.desc}</Card.Text>
+//<ItemCount cantidad={props.cant} />

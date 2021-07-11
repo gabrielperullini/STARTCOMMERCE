@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Card, Button, ListGroup, ListGroupItem } from "react-bootstrap";
 import CartWidget from "../CartWidget/CartWidget";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import { CartContext } from "../CartContext/CartContext.";
+
 function ItemCount(props) {
+  const [items, setItems] = useContext(CartContext);
   const [numero, setNumero] = useState(props.cantidad);
   const [cant, setCant] = useState(0);
-
+console.log("cantidad", items.itemsData)
   //PARTE DEL HOOK
   const handleIncrement = () => {
     if (numero > 0) {
