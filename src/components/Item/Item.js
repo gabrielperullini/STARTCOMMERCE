@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import ItemCount from "../ItemCount/ItemCount";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ function Item(props) {
             <Card.Title>{props.tit}</Card.Title>
           </Card.Body>
           <Card.Body>
-            <Card.Text>Precio: {props.price}</Card.Text>            
+            <Card.Text>Precio: {props.price}</Card.Text>
           </Card.Body>
         </Card>
       </div>

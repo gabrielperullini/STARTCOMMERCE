@@ -2,9 +2,22 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useCartContext } from "../CartContext/CartContext.";
 
 function ItemDetail(props) {
-  console.log("props", props.imagen);
+  const { cart, addToCart } = useCartContext();
+
+  const obj = {
+    titulo: props.tit,
+    descripcion: props.desc,
+    precio: props.price,
+    id: props.id,
+    imagen: props.imagen,
+  };
+  const onAdd = (cant, object) => addToCart(cant, obj);
+
+  console.log(cart);
+
   return (
     <>
       <div key={props.id}>
@@ -16,7 +29,12 @@ function ItemDetail(props) {
           </Card.Body>
           <Card.Body>
             <Card.Text>Precio:{props.price}</Card.Text>
-            <ItemCount cantidad={props.cant} />
+            <ItemCount
+              cantidad={props.cant}
+              id={props.id}
+              price={props.price}
+              paramOnAdd={onAdd}
+            />
           </Card.Body>
         </Card>
       </div>

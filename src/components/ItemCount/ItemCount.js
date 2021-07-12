@@ -1,15 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Card, Button, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import { CartContext } from "../CartContext/CartContext.";
+import { useCartContext } from "../CartContext/CartContext.";
 
 function ItemCount(props) {
-  const [items, setItems] = useContext(CartContext);
   const [numero, setNumero] = useState(props.cantidad);
   const [cant, setCant] = useState(0);
-console.log("cantidad", items.itemsData)
+  const { cart } = useCartContext();
+
+  const [btnActivo, setBtnActivo] = useState(true);
+
   //PARTE DEL HOOK
   const handleIncrement = () => {
     if (numero > 0) {
@@ -50,7 +52,18 @@ console.log("cantidad", items.itemsData)
           </div>
         </div>
 
-        <Button variant="primary">AGREGAR</Button>
+        <Button
+          variant="primary"
+          onClick={() => props.paramOnAdd(cant, props.id)}
+          type="submit"
+        >
+          AGREGAR
+        </Button>
+        <Link className="Link" to="/Cart" disabled={cart.length === 0 ? "true" : "false"}>
+          <Button >
+            TERMINAR COMPRA
+          </Button>
+        </Link>
       </Card.Body>
     </Card>
   );
