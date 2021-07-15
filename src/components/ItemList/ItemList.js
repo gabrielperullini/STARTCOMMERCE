@@ -12,6 +12,7 @@ function ItemList(props) {
             tit={item.title}
             desc={item.descripcion}
             cant={item.cantidad}
+            cantidad={0}
             id={item.id}
             price={item.price}
           />

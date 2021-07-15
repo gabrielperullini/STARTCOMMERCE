@@ -16,7 +16,7 @@ function ItemDetail(props) {
   };
   const onAdd = (cant, object) => addToCart(cant, obj);
 
-  console.log(cart);
+  console.log("cart",cart);
 
   return (
     <>

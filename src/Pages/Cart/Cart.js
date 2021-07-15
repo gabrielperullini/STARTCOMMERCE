@@ -7,15 +7,15 @@ function Cart(props) {
   const { cart } = useCartContext();
   return (
     <>
-      {cart.map((item) => (
+      {cart.map((item) => (          
         <div className="col" key={item.id}>
           <Item
             imagen={item.imagen}
             tit={item.titulo}
             desc={item.descripcion}
-            cant={item.cant}
+            cant={item.cantidad}
             id={item.id}
-            price={item.precio}
+            price={item.precio}            
           />
         </div>
       ))}

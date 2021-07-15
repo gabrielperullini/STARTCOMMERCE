@@ -7,22 +7,21 @@ import { useCartContext } from "../CartContext/CartContext.";
 
 function ItemCount(props) {
   const [numero, setNumero] = useState(props.cantidad);
-  const [cant, setCant] = useState(0);
+  const [cantidad, setCantidad] = useState(0);
   const { cart } = useCartContext();
-
-  const [btnActivo, setBtnActivo] = useState(true);
 
   //PARTE DEL HOOK
   const handleIncrement = () => {
     if (numero > 0) {
       setNumero(numero - 1);
-      setCant(cant + 1);
+      setCantidad(cantidad + 1);
     }
   };
+
   const handleDecrement = () => {
-    if (cant > 0) {
+    if (cantidad > 0) {
       setNumero(numero + 1);
-      setCant(cant - 1);
+      setCantidad(cantidad - 1);
     }
   };
 
@@ -31,7 +30,7 @@ function ItemCount(props) {
       <Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroupItem>
-            STOCK: {numero} COMPRA: {cant}
+            STOCK: {numero} COMPRA: {cantidad}
           </ListGroupItem>
         </ListGroup>
         <div className="container">
@@ -54,15 +53,16 @@ function ItemCount(props) {
 
         <Button
           variant="primary"
-          onClick={() => props.paramOnAdd(cant, props.id)}
+          onClick={() => props.paramOnAdd(cantidad, props.id)}
           type="submit"
         >
           AGREGAR
         </Button>
-        <Link className="Link" to="/Cart" disabled={cart.length === 0 ? "true" : "false"}>
-          <Button >
+
+        <Link className="Link" to="/Cart">
+          <button disabled={cart.length === 0 ? true : false} enabled>
             TERMINAR COMPRA
-          </Button>
+          </button>
         </Link>
       </Card.Body>
     </Card>
