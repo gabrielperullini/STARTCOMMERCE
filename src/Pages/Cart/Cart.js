@@ -1,10 +1,12 @@
 import React from "react";
 import Item from "../../components/Item/Item";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap";
 import { useCartContext } from "../../components/CartContext/CartContext.";
+import { Link } from "react-router-dom";
 
 function Cart(props) {
-  const { cart } = useCartContext();
+  const { cart, clearCart } = useCartContext();
 
   console.log("cantidad items", cart.length);
   let tot = 0;
@@ -19,7 +21,7 @@ function Cart(props) {
 
   return (
     <>
-      <h2>Las ofertas de la semana</h2>
+      <h2>Su carrito tiene: {cart.length} elementos </h2>
       <div className="container">
         <div className="row align-items-start">
           <div className="row">
@@ -33,9 +35,11 @@ function Cart(props) {
                 price={item.precio}
               />
             ))}
-            <div className="row">
-              <h1>Cantidad de Items Seleccionados: {cart.length}</h1>
+            <div className="row">              
               <h1>Total a Pagar: ${totalPagar()}</h1>
+              <Link className="Link" to="/">
+              <Button variant="danger" onClick={clearCart}>Eliminar Carrito</Button>
+              </Link>
             </div>
           </div>
         </div>

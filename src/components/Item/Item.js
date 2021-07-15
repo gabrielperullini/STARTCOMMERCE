@@ -1,10 +1,13 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../CartContext/CartContext.";
 
 function Item(props) {
+  const { deletedToCart } = useCartContext();
+
   if (props.cantidad === 0) {
     return (
       <>
@@ -36,8 +39,11 @@ function Item(props) {
             </Card.Body>
             <Card.Body>
               <Card.Text>
-                Precio: ${props.price} Compra:{props.cant}
+                Precio: ${props.price} Compra: {props.cant}
               </Card.Text>
+              <Button onClick={() => deletedToCart(props.id)} type="submit">
+                Eliminar
+              </Button>
             </Card.Body>
           </Card>
         </div>

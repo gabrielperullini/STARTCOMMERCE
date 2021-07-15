@@ -19,7 +19,7 @@ function ItemDetailContent(props) {
   let objeto;
 
   objeto = items.filter((item) => item.id === props.identificador);
-
+  console.log("itemlistdetailcontent", objeto);
   return (
     <>
       {objeto.map((item) => (

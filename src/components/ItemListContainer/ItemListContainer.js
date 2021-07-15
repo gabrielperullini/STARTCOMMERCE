@@ -23,7 +23,7 @@ const ItemListContainer = (props) => {
   } else {
     objdato = items.filter((item) => item.destacado === true);
   }
-
+  console.log("itemlistcontainer", objdato);
   return (
     <>
       <ItemList objeto={objdato} />
