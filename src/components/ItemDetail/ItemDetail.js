@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useCartContext } from "../CartContext/CartContext.";
 
 function ItemDetail(props) {
-  const { cart, addToCart , clearCart } = useCartContext();
+  const { cart, addToCart, clearCart } = useCartContext();
 
   const obj = {
     titulo: props.tit,
@@ -16,7 +16,7 @@ function ItemDetail(props) {
   };
   const onAdd = (cant, object) => addToCart(cant, obj);
 
-  console.log("cart",cart);
+  console.log("cart", cart);
 
   return (
     <>

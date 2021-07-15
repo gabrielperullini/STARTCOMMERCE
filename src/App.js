@@ -14,7 +14,6 @@ import Cart from "./Pages/Cart/Cart";
 //COMPONENTS
 import NavBar from "./components/NavBar/NavBar";
 
-
 function App() {
   return (
     <>

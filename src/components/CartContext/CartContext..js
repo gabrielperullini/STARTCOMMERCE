@@ -16,15 +16,13 @@ export const CartProvider = (props) => {
 
   const addToCart = (cantidad, obj) => {
     objeto = cart.find((item) => item.id === obj.id);
-    console.log("objeto", objeto);
-    console.log("obj", obj.id);
 
     if (objeto == null) {
       console.log("paso el null");
       setCart((prev) => [...prev, { ...obj, cantidad }]);
     } else {
       console.log("no paso el null");
-      
+
       objeto.cantidad = objeto.cantidad + cantidad;
     }
   };

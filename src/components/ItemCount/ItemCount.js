@@ -63,10 +63,13 @@ function ItemCount(props) {
           <button disabled={cart.length === 0 ? true : false}>
             TERMINAR COMPRA
           </button>
-        </Link>        
-          <button disabled={cart.length === 0 ? true : false} onClick={() => props.paramClearCart()}>
-            Eliminar carrito
-          </button>        
+        </Link>
+        <button
+          disabled={cart.length === 0 ? true : false}
+          onClick={() => props.paramClearCart()}
+        >
+          Eliminar carrito
+        </button>
       </Card.Body>
     </Card>
   );
