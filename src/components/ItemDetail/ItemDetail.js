@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useCartContext } from "../CartContext/CartContext.";
 
 function ItemDetail(props) {
-  const { cart, addToCart } = useCartContext();
+  const { cart, addToCart , clearCart } = useCartContext();
 
   const obj = {
     titulo: props.tit,
@@ -34,6 +34,7 @@ function ItemDetail(props) {
               id={props.id}
               price={props.price}
               paramOnAdd={onAdd}
+              paramClearCart={clearCart}
             />
           </Card.Body>
         </Card>
