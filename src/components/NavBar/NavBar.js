@@ -48,13 +48,6 @@ function NavBar(props) {
                 <Link className="Link" to={`/categorias/${"MUEBLES"}`}>
                   <NavDropdown.Item href="#muebles">Muebles</NavDropdown.Item>
                 </Link>
-
-                <NavDropdown.Divider />
-                <Link className="Link" to={`/categorias/${"SMARTHOME"}`}>
-                  <NavDropdown.Item href="#hogarinteligente">
-                    Hogar Inteligente
-                  </NavDropdown.Item>
-                </Link>
               </NavDropdown>
               <NavDropdown title="Vehiculos" id="basic-nav-dropdown">
                 <Link className="Link" to={`/categorias/${"ACCESORIOS"}`}>
@@ -68,40 +61,15 @@ function NavBar(props) {
                     Cubiertas
                   </NavDropdown.Item>
                 </Link>
-                <Link className="Link" to={`/categorias/${"REPUESTOS"}`}>
-                  <NavDropdown.Item href="#repuestos">
-                    Repuestos
-                  </NavDropdown.Item>
-                </Link>
-                <NavDropdown.Divider />
-
-                <Link
-                  className="Link"
-                  to={`/categorias/${"OFERTAS_VEHICULOS"}`}
-                >
-                  <NavDropdown.Item href="#ofertasvehiculos">
-                    Ofertas Especiales
-                  </NavDropdown.Item>
-                </Link>
               </NavDropdown>
               <NavDropdown title="Juguetes" id="basic-nav-dropdown">
-                <Link className="Link" to={`/categorias/${"NIÑOS"}`}>
-                  <NavDropdown.Item href="#juguetesninios">
-                    Niños
-                  </NavDropdown.Item>
+                <Link className="Link" to={`/categorias/${"JUGUETES"}`}>
+                  <NavDropdown.Item href="#juguetes">Juguetes</NavDropdown.Item>
                 </Link>
-                <Link className="Link" to={`/categorias/${"NIÑAS"}`}>
-                  <NavDropdown.Item href="#juguetesninias">
-                    Niñas
-                  </NavDropdown.Item>
-                </Link>
-                <NavDropdown.Item href="#juguetesconsolas">
-                  Consolas
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <Link className="Link" to={`/categorias/${"OFERJUEGOS"}`}>
-                  <NavDropdown.Item href="#ofertasjuegos">
-                    Juegos en ofertas
+
+                <Link className="Link" to={`/categorias/${"CONSOLAS"}`}>
+                  <NavDropdown.Item href="#juguetesconsolas">
+                    Consolas
                   </NavDropdown.Item>
                 </Link>
               </NavDropdown>
@@ -110,9 +78,6 @@ function NavBar(props) {
                   <NavDropdown.Item href="#bicicletas">
                     Bicicletas
                   </NavDropdown.Item>
-                </Link>
-                <Link className="Link" to={`/categorias/${"CAMPING"}`}>
-                  <NavDropdown.Item href="Camping">Camping</NavDropdown.Item>
                 </Link>
               </NavDropdown>
               <Link className="Link" to="/About">
@@ -162,13 +127,6 @@ function NavBar(props) {
                 <Link className="Link" to={`/categorias/${"MUEBLES"}`}>
                   <NavDropdown.Item href="#muebles">Muebles</NavDropdown.Item>
                 </Link>
-
-                <NavDropdown.Divider />
-                <Link className="Link" to={`/categorias/${"SMARTHOME"}`}>
-                  <NavDropdown.Item href="#hogarinteligente">
-                    Hogar Inteligente
-                  </NavDropdown.Item>
-                </Link>
               </NavDropdown>
               <NavDropdown title="Vehiculos" id="basic-nav-dropdown">
                 <Link className="Link" to={`/categorias/${"ACCESORIOS"}`}>
@@ -182,40 +140,15 @@ function NavBar(props) {
                     Cubiertas
                   </NavDropdown.Item>
                 </Link>
-                <Link className="Link" to={`/categorias/${"REPUESTOS"}`}>
-                  <NavDropdown.Item href="#repuestos">
-                    Repuestos
-                  </NavDropdown.Item>
-                </Link>
-                <NavDropdown.Divider />
-
-                <Link
-                  className="Link"
-                  to={`/categorias/${"OFERTAS_VEHICULOS"}`}
-                >
-                  <NavDropdown.Item href="#ofertasvehiculos">
-                    Ofertas Especiales
-                  </NavDropdown.Item>
-                </Link>
               </NavDropdown>
               <NavDropdown title="Juguetes" id="basic-nav-dropdown">
-                <Link className="Link" to={`/categorias/${"NIÑOS"}`}>
-                  <NavDropdown.Item href="#juguetesninios">
-                    Niños
-                  </NavDropdown.Item>
+                <Link className="Link" to={`/categorias/${"JUGUETES"}`}>
+                  <NavDropdown.Item href="#juguetes">Juguetes</NavDropdown.Item>
                 </Link>
-                <Link className="Link" to={`/categorias/${"NIÑAS"}`}>
-                  <NavDropdown.Item href="#juguetesninias">
-                    Niñas
-                  </NavDropdown.Item>
-                </Link>
-                <NavDropdown.Item href="#juguetesconsolas">
-                  Consolas
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <Link className="Link" to={`/categorias/${"OFERJUEGOS"}`}>
-                  <NavDropdown.Item href="#ofertasjuegos">
-                    Juegos en ofertas
+
+                <Link className="Link" to={`/categorias/${"CONSOLAS"}`}>
+                  <NavDropdown.Item href="#juguetesconsolas">
+                    Consolas
                   </NavDropdown.Item>
                 </Link>
               </NavDropdown>
@@ -224,9 +157,6 @@ function NavBar(props) {
                   <NavDropdown.Item href="#bicicletas">
                     Bicicletas
                   </NavDropdown.Item>
-                </Link>
-                <Link className="Link" to={`/categorias/${"CAMPING"}`}>
-                  <NavDropdown.Item href="Camping">Camping</NavDropdown.Item>
                 </Link>
               </NavDropdown>
               <Link className="Link" to="/About">

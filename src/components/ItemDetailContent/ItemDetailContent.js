@@ -5,15 +5,26 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 //DATOS
 import { itemsData } from "../ItemData/ItemData";
+import { db } from "../firebase";
 
 function ItemDetailContent(props) {
   const [items, setItems] = useState([]);
 
+  const datosfirebase = [];
+  const getItemData = () => {
+    db.collection("ItemData").onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        //console.log(doc.data());
+        //console.log("id firebase",doc.id);
+        datosfirebase.push({ id: doc.id, ...doc.data() });
+      });
+      setItems(datosfirebase);
+    });
+  };
+
   //USE EFFECT
   useEffect(() => {
-    setTimeout(() => {
-      setItems(itemsData);
-    }, 2000);
+    getItemData();
   });
 
   let objeto;

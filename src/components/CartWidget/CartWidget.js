@@ -16,7 +16,7 @@ function CartWidget() {
           <Card border="dark">
             <Card.Img
               alt="logo empresa"
-              src={logo}
+              src="https://firebasestorage.googleapis.com/v0/b/startcommerce-392fe.appspot.com/o/cartwidget%2Flogo.svg?alt=media&token=ec8df1ca-06ba-43ad-a354-4c19a53b81a2"
               backgroundColor="black"
               width="40"
               height="40"
@@ -34,7 +34,7 @@ function CartWidget() {
           <Card border="dark">
             <Card.Img
               alt="logo empresa"
-              src={logo}
+              src="https://firebasestorage.googleapis.com/v0/b/startcommerce-392fe.appspot.com/o/cartwidget%2Flogo.svg?alt=media&token=ec8df1ca-06ba-43ad-a354-4c19a53b81a2"
               backgroundColor="black"
               width="40"
               height="40"
