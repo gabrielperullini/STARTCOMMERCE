@@ -61,7 +61,7 @@ function ItemCount(props) {
 
         <Link className="Link" to="/Cart">
           <button disabled={cart.length === 0 ? true : false}>
-            TERMINAR COMPRA
+            Procesar compra
           </button>
         </Link>
         <button

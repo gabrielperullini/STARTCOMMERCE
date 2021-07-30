@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ItemDetailContent from "../../components/ItemDetailContent/ItemDetailContent";
 
 const Detalle = ({ match }) => {
-  console.log(match.params.id);
-
   return (
     <>
       <h2>DETALLE</h2>

@@ -14,8 +14,6 @@ function ItemDetailContent(props) {
   const getItemData = () => {
     db.collection("ItemData").onSnapshot((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        //console.log(doc.data());
-        //console.log("id firebase",doc.id);
         datosfirebase.push({ id: doc.id, ...doc.data() });
       });
       setItems(datosfirebase);
@@ -25,12 +23,11 @@ function ItemDetailContent(props) {
   //USE EFFECT
   useEffect(() => {
     getItemData();
-  });
+  }, []);
 
   let objeto;
 
   objeto = items.filter((item) => item.id === props.identificador);
-  console.log("itemlistdetailcontent", objeto);
   return (
     <>
       {objeto.map((item) => (

@@ -15,7 +15,6 @@ export const CartProvider = (props) => {
   let objeto;
 
   const deletedToCart = (id) => {
-    console.log("context Item", id);
     const copy = [...cart];
     const index = copy.findIndex((x) => x.id === id);
     if (index !== -1) {
@@ -31,11 +30,8 @@ export const CartProvider = (props) => {
     objeto = cart.find((item) => item.id === obj.id);
 
     if (objeto == null) {
-      console.log("paso el null");
       setCart((prev) => [...prev, { ...obj, cantidad }]);
     } else {
-      console.log("no paso el null");
-
       objeto.cantidad = objeto.cantidad + cantidad;
     }
   };

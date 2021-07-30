@@ -10,7 +10,6 @@ import { useCartContext } from "../CartContext/CartContext.";
 
 function NavBar(props) {
   const { cart } = useCartContext();
-  console.log("cart numero", cart.length);
   if (cart.length === 0) {
     return (
       <div className="App">

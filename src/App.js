@@ -10,6 +10,7 @@ import Home from "./Pages/Home/Home";
 import Detalle from "./Pages/Detalle/Detalle";
 import Categoria from "./Pages/Categoria/Categoria";
 import Cart from "./Pages/Cart/Cart";
+import CheckOut from "./Pages/CheckOut/CheckOut";
 
 //COMPONENTS
 import NavBar from "./components/NavBar/NavBar";
@@ -26,6 +27,7 @@ function App() {
             <Route path="/Detalle/:id" exact component={Detalle} />
             <Route path="/categorias/:category" exact component={Categoria} />
             <Route path="/Cart" exact component={Cart} />
+            <Route path="/CheckOut" exact component={CheckOut} />
           </Switch>
         </CartProvider>
       </BrowserRouter>

@@ -41,7 +41,11 @@ function Item(props) {
               <Card.Text>
                 Precio: ${props.price} Compra: {props.cant}
               </Card.Text>
-              <Button onClick={() => deletedToCart(props.id)} type="submit">
+              <Button
+                variant="danger"
+                onClick={() => deletedToCart(props.id)}
+                type="submit"
+              >
                 Eliminar
               </Button>
             </Card.Body>
