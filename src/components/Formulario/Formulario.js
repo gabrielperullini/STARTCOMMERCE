@@ -4,6 +4,8 @@ import { useCartContext } from "../CartContext/CartContext.";
 
 const Formulario = (props) => {
   const { cart, clearCart } = useCartContext();
+  const [validated, setValidated] = useState(false);
+
   const initialState = {
     NYA: "",
     EMAIL: "",
@@ -17,19 +19,28 @@ const Formulario = (props) => {
   };
 
   const handleSubmit = (e) => {
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     e.preventDefault();
-    props.addProduct(values);
-    setValues({ ...initialState });
-    clearCart();
+    setValidated(true);
+    if (values.NYA !== "" && values.EMAIL !== "" && values.DIRECCION !== "") {
+      props.addProduct(values);
+      setValues({ ...initialState });
+      clearCart();
+    }
   };
 
   if (cart.length !== 0) {
     return (
       <div>
-        <Form onSubmit={handleSubmit}>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formNyA">
             <Form.Label>Nombre y Apellido</Form.Label>
             <Form.Control
+              required
               type="text"
               placeholder="Nombre y Apellido"
               onChange={handleOnChange}
@@ -43,6 +54,7 @@ const Formulario = (props) => {
           <Form.Group className="mb-3" controlId="formEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
+              required
               type="email"
               placeholder="Ingrese correo electronico"
               onChange={handleOnChange}
@@ -56,6 +68,7 @@ const Formulario = (props) => {
           <Form.Group className="mb-3" controlId="formDireccion">
             <Form.Label>Direccion:</Form.Label>
             <Form.Control
+              required
               type="text"
               placeholder="Direccion"
               onChange={handleOnChange}
@@ -64,12 +77,10 @@ const Formulario = (props) => {
             />
             <Form.Text className="text-muted">Ingrese su Direccion</Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check
-              type="checkbox"
-              label="Estoy de acuerdo con Terminos y Condiciones"
-            />
-          </Form.Group>
+          <Form.Group
+            className="mb-3"
+            controlId="formBasicCheckbox"
+          ></Form.Group>
           <Button variant="primary" type="submit">
             Terminar Compra
           </Button>
@@ -121,11 +132,7 @@ const Formulario = (props) => {
             <Form.Text className="text-muted">Ingrese su Direccion</Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check
-              type="checkbox"
-              label="Estoy de acuerdo con Terminos y Condiciones"
-              disabled
-            />
+            <Form.Group className="mb-3"></Form.Group>
           </Form.Group>
           <Button variant="primary" type="submit" disabled>
             Terminar Compra
