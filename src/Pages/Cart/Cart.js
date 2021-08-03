@@ -1,9 +1,10 @@
 import React from "react";
-import Item from "../../components/Item/Item";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { useCartContext } from "../../components/CartContext/CartContext.";
 import { Link } from "react-router-dom";
+
+//COMPONENTE
+import Item from "../../components/Item/Item";
 
 function Cart(props) {
   const { cart, clearCart } = useCartContext();
@@ -49,6 +50,7 @@ function Cart(props) {
                   cant={item.cantidad}
                   id={item.id}
                   price={item.precio}
+                  key={item.id}
                 />
               ))}
               <div className="row">

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Card, Button, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
+//COMPONENTE
 import CartWidget from "../CartWidget/CartWidget";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+//TRAER CONTEXTO
 import { useCartContext } from "../CartContext/CartContext.";
 
 function ItemCount(props) {
@@ -36,7 +39,7 @@ function ItemCount(props) {
         <div className="container">
           <div className="row align-items-start">
             <div className="col">
-              <CartWidget />
+              <CartWidget envio="count" />
             </div>
             <div className="col">
               <Button onClick={handleIncrement} variant="outline-success">

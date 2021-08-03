@@ -1,11 +1,11 @@
 import { React } from "react";
-
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 //COMPONENTE
 import CartWidget from "../CartWidget/CartWidget";
+
+//TRAER CONTEXTO
 import { useCartContext } from "../CartContext/CartContext.";
 
 function NavBar(props) {
@@ -15,7 +15,7 @@ function NavBar(props) {
       <div className="App">
         <Navbar bg="light" expand="lg">
           <Link className="Link" to="/">
-            <CartWidget />
+            <CartWidget envio="menu" />
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

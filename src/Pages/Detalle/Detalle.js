@@ -1,5 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+//COMPONENTE
 import ItemDetailContent from "../../components/ItemDetailContent/ItemDetailContent";
 
 const Detalle = ({ match }) => {

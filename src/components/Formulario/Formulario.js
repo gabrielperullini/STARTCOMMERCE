@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+
+//TRAER CONTEXTO
 import { useCartContext } from "../CartContext/CartContext.";
 
 const Formulario = (props) => {

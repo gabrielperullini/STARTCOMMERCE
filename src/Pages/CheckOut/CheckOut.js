@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import Formulario from "../../components/Formulario/Formulario";
-import { useCartContext } from "../../components/CartContext/CartContext.";
 import { db } from "../../components/firebase";
 import moment from "moment";
+
+//COMPONENTE
+import Formulario from "../../components/Formulario/Formulario";
+
+//TRAER CONTEXTO
+import { useCartContext } from "../../components/CartContext/CartContext.";
 
 const CheckOut = (props) => {
   const { cart, clearCart, addToCart } = useCartContext();

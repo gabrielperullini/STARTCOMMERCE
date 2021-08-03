@@ -1,5 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+//COMPONENTE
 import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 
 const Home = () => {

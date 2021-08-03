@@ -1,6 +1,7 @@
 import React from "react";
+
+//COMPONENTE
 import Item from "../Item/Item";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function ItemList(props) {
   return (

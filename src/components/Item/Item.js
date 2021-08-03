@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+
+//TRAER CONTEXTO
 import { useCartContext } from "../CartContext/CartContext.";
 
 function Item(props) {

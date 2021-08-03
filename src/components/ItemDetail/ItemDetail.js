@@ -1,7 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+
+//COMPONENTE
 import ItemCount from "../ItemCount/ItemCount";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+//TRAER CONTEXTO
 import { useCartContext } from "../CartContext/CartContext.";
 
 function ItemDetail(props) {
